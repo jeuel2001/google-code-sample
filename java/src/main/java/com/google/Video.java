@@ -26,8 +26,21 @@ class Video {
     return videoId;
   }
 
-  /** Returns a readonly collection of the tags of the video. */
+  /** Returns a collection of the tags of the video. */
   List<String> getTags() {
     return tags;
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder result = new StringBuilder();
+    result.append(title + " ("+ videoId + ") " + "[");
+    for (int i = 0; i < tags.size(); i++) {
+      result.append(tags.get(i));
+      if (i == tags.size() - 1) break;
+      result.append(" ");
+    }
+    result.append("]");
+    return result.toString();
   }
 }

@@ -16,7 +16,7 @@ public class Run {
       if (input.equalsIgnoreCase("exit")) {
         System.out.println("YouTube has now terminated its execution. " +
             "Thank you and goodbye!");
-        return;
+        System.exit(0);
       }
       parser.executeCommand(Arrays.asList(input.split("\\s+")));
     }
